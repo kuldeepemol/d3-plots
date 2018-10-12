@@ -125,7 +125,7 @@ d3.csv('assets/data/data.csv').then(function(data) {
                         .enter()
                             .append('circle')
                             .classed('stateCircle', true)
-                            .attr('r', d => 15)
+                            .attr('r', d => 10)
                             .attr('cx', (d, i) => xScale(d[currentXAxis]))
                             .attr('cy', d => yScale(d[currentYAxis]));
 
@@ -142,7 +142,7 @@ d3.csv('assets/data/data.csv').then(function(data) {
                             .append('text')
                             .classed('stateText', true)
                             .attr('x', d => xScale(d[currentXAxis]))
-                            .attr('y', d => yScale(d[currentYAxis])+5)
+                            .attr('y', d => yScale(d[currentYAxis])+3)
                             .text(d => `${d.abbr}`);
 
     textsGroup = updateToolTip(currentXAxis, currentYAxis, textsGroup);
